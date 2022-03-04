@@ -1,3 +1,2 @@
-const hello = "I am hungry. "
-const a = 'aa'
-console.log(hello, a)
+const hello_world = "Hello World!";
+console.log(hello_world)
