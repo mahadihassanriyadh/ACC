@@ -73,6 +73,23 @@ const person2: IPerson = {
     hobby: "Football",
 };
 
+const person3: IPerson = {
+    name: "Mezba",
+    age: 25,
+    hobby: "Cooking",
+    work: "Salesman",
+};
+
+
+// const personArray: IPerson[] = [
+//     person2,
+//     person3,
+// ];
+
+const personArray: Array<IPerson> = [
+    person2,
+    person3,
+];
 
 
 
@@ -84,3 +101,39 @@ enum Colors {
 }
 
 console.log(Colors.color3)
+
+
+// NUMERIC Enums
+
+// enum has the feature of auto incrementation, in the code below, down will have the value 2, left will have the value 3 and so on.
+enum Direction1 {
+    up = 1,
+    down,
+    left,
+    right,
+};
+
+// if we do not declare any value at first the value will start from 0. In the below code up will have the value 0 and down will have the value 1 and so on.
+enum Direction2 {
+    up,
+    down, 
+    left,
+    right,
+}; 
+
+console.log(Direction1.right, Direction2.down)
+
+
+
+// Using enum
+enum UserResponse {
+    No = 0,
+    Yes = 1,
+}
+
+function respond(recipient: string, message: UserResponse): void {
+    // if a function does not return any value then you can specify void as return type.
+    console.log(recipient, message)
+}
+
+respond("Riyadh", UserResponse.Yes)
