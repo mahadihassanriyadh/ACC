@@ -1,1 +1,0 @@
-const my_name: string = "Riyadh"
