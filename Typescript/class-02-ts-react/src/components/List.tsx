@@ -1,9 +1,22 @@
-// rafc (shortcut)
+// rafce (shortcut)
 
 import React from 'react'
 
-export const List = () => {
+const List = ({items, onClick}: {
+  items: string[];
+  onClick: (item: string) => void
+}) => {
   return (
-    <div>List</div>
+    <div>
+      {
+        items.map(item => (
+          <li onClick={()=>onClick(item)}>
+            {item}
+          </li>
+        ))
+      }
+    </div>
   )
 }
+
+export default List
